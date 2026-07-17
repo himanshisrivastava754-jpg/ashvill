@@ -14,9 +14,12 @@ interface ButtonBaseProps {
   rightIcon?: ReactNode;
 }
 
-interface ButtonAsButton extends ButtonBaseProps, ButtonHTMLAttributes<HTMLButtonElement> {
+interface ButtonAsButton
+  extends ButtonBaseProps,
+    Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'children'> {
   href?: undefined;
 }
+
 
 interface ButtonAsLink extends ButtonBaseProps {
   href: string;
@@ -70,7 +73,8 @@ export function Button({
     );
   }
 
-  const { href: _, ...buttonProps } = props as ButtonAsButton;
+  const { href, ...buttonProps } = props as ButtonAsButton;
+void href;
   return (
     <button className={classes} {...buttonProps}>
       {leftIcon}
