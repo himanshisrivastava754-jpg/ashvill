@@ -45,7 +45,11 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
   if (!service) notFound();
 
   const Icon = iconMap[service.icon] ?? Code2;
-  const jsonLd = serviceJsonLd(service);
+  const jsonLd = serviceJsonLd({
+  name: service.title,
+  description: service.shortDescription,
+  slug: service.slug,
+});
   const breadcrumbs = breadcrumbJsonLd([
     { name: 'Services', path: '/services' },
     { name: service.title, path: `/services/${slug}` },
