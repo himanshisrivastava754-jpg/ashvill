@@ -45,7 +45,7 @@ export function Header() {
           <Logo />
 
           <div className="hidden items-center gap-1 lg:flex">
-            {navigation.main.slice(0, 2).map((item) => (
+            {navigation.main.slice(0, 1).map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
@@ -105,7 +105,7 @@ export function Header() {
               </AnimatePresence>
             </div>
 
-            {navigation.main.slice(2).map((item) => (
+            {navigation.main.slice(2).filter((item) => item.label !== 'Contact').map((item) => (
               <Link
                 key={item.href}
                 href={item.href}

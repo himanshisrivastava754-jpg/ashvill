@@ -6,12 +6,12 @@ export const company = {
     'Ashvill IT Solutions delivers premium enterprise technology services — custom software, cloud, AI, cybersecurity, and digital transformation — trusted by organizations worldwide.',
   domain: 'ashvill.com',
   url: 'https://ashvill.com',
-  foundedYear: 2018,
+  foundedYear: 2015,
   headquarters: 'Bengaluru, India',
   employeeCount: '40–50',
   projectCount: '300–400',
   clientCount: '300–400',
-  rating: 4.3,
+  rating: 4.7,
   industry: 'Global Information Technology Services',
 } as const;
 
@@ -34,11 +34,11 @@ export const contact = {
 } as const;
 
 export const stats = [
-  { label: 'Years of Excellence', value: '8+' },
+  { label: 'Years of Excellence', value: '9+' },
   { label: 'Enterprise Projects', value: '350+' },
-  { label: 'Global Clients', value: '350+' },
+  { label: 'Global Clients', value: '400+' },
   { label: 'Team Members', value: '45+' },
-  { label: 'Client Satisfaction', value: '4.3/5' },
+  { label: 'Client Satisfaction', value: '4.7/5' },
 ] as const;
 
 export const navigation = {
